@@ -1,6 +1,7 @@
 import matplotlib
 import matplotlib.pyplot as pyplot
 import numpy
+import clearingFunction
 
 class spreadStorer:
     XCad = []
@@ -63,3 +64,61 @@ class offsetSpreadAnalyse:
             pyplot.plot(xData, yData, 'k.')
 
         pyplot.show()
+
+    def graphIndividualMune(self):
+        notDone = True
+
+        while notDone:
+            clearingFunction.clear()
+
+            print('----------Plot Individual spreads------------')
+            print('Input the number for correct option.')
+            print('0: Looks at the spreads in X offsets.')
+            print('1: Looks at the spreads in Y offsets.')
+            print("Input 'back' to go back.")
+
+            userInput = input()
+            if userInput == '0':
+                self.graphDifferenceFromMeanAsFunctionOfXCad('X')
+            elif userInput == '1':
+                self.graphDifferenceFromMeanAsFunctionOfXCad('Y')
+            elif userInput == 'back':
+                notDone = False
+
+    def plotHistogram(self, coordinate):
+        if coordinate == 'X':
+            DataListStage1 = self.xOffsetsStage1HistorgramData
+            DataListStage2 = self.xOffsetsStage2HistorgramData
+        else:
+            DataListStage1 = self.yOffsetsStage1HistorgramData
+            DataListStage2 = self.yOffsetsStage2HistorgramData
+
+        pyplot.subplot(211)
+        pyplot.xlabel(coordinate + " offsets difference from mean (stage1)")
+        pyplot.hist(DataListStage1)
+
+        pyplot.subplot(212)
+        pyplot.xlabel(coordinate + " offsets difference from mean (stage2)")
+        pyplot.hist(DataListStage2)
+
+        pyplot.show()
+
+    def graphHistogramMenu(self):
+        notDone = True
+
+        while notDone:
+            clearingFunction.clear()
+
+            print('------------Histogram Plotting---------------')
+            print('Input the number for correct option.')
+            print('0: Looks at the spreads in X offsets.')
+            print('1: Looks at the spreads in Y offsets.')
+            print("Input 'back' to go back.")
+
+            userInput = input()
+            if userInput == '0':
+                self.plotHistogram('X')
+            elif userInput == '1':
+                self.plotHistogram('Y')
+            elif userInput == 'back':
+                notDone = False

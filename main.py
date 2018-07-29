@@ -26,7 +26,9 @@ def mainMenu():
         elif userInput == '0':
             graphParticularDataFile()
         elif userInput == '1':
-            offsetSpreadAnalyseObject.graphDifferenceFromMeanAsFunctionOfXCad('Y')
+            offsetSpreadAnalyseObject.graphIndividualMune()
+        elif userInput == '2':
+            offsetSpreadAnalyseObject.graphHistogramMenu()
 
 def graphParticularDataFile():
     notDone = True
