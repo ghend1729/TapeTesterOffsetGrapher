@@ -25,6 +25,8 @@ def mainMenu():
             notDone = False
         elif userInput == '0':
             graphParticularDataFile()
+        elif userInput == '1':
+            offsetSpreadAnalyseObject.graphDifferenceFromMeanAsFunctionOfXCad('Y')
 
 def graphParticularDataFile():
     notDone = True

@@ -38,3 +38,28 @@ class offsetSpreadAnalyse:
             result += spreadSet
 
         return result
+
+    def graphDifferenceFromMeanAsFunctionOfXCad(self, coordinate):
+        xData = self.XCad
+
+        if coordinate == 'X':
+            DataListStage1 = [[item[i]*10**6 for item in self.xOffsetsStage1.spreads] for i in range(self.numberOfDataSets)]
+            DataListStage2 = [[item[i]*10**6 for item in self.xOffsetsStage2.spreads] for i in range(self.numberOfDataSets)]
+        else:
+            DataListStage1 = [[item[i]*10**6 for item in self.yOffsetsStage1.spreads] for i in range(self.numberOfDataSets)]
+            DataListStage2 = [[item[i]*10**6 for item in self.yOffsetsStage2.spreads] for i in range(self.numberOfDataSets)]
+
+        pyplot.subplot(211)
+        pyplot.xlabel("X CAD position")
+        pyplot.ylabel(coordinate + " offsets difference from mean (stage1)")
+        for yData in DataListStage1:
+            pyplot.plot(xData, yData, 'k.')
+
+
+        pyplot.subplot(212)
+        pyplot.xlabel("X CAD position")
+        pyplot.ylabel(coordinate + " offsets difference from mean (stage2)")
+        for yData in DataListStage2:
+            pyplot.plot(xData, yData, 'k.')
+
+        pyplot.show()
