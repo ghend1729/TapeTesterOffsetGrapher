@@ -51,15 +51,15 @@ class offsetSpreadAnalyse:
             DataListStage2 = [[item[i]*10**6 for item in self.yOffsetsStage2.spreads] for i in range(self.numberOfDataSets)]
 
         pyplot.subplot(211)
-        pyplot.xlabel("X CAD position")
-        pyplot.ylabel(coordinate + " offsets difference from mean (stage1)")
+        pyplot.xlabel("X CAD position/meters")
+        pyplot.ylabel(coordinate + " offsets difference from mean (stage1)/micrometers")
         for yData in DataListStage1:
             pyplot.plot(xData, yData, 'k.')
 
 
         pyplot.subplot(212)
-        pyplot.xlabel("X CAD position")
-        pyplot.ylabel(coordinate + " offsets difference from mean (stage2)")
+        pyplot.xlabel("X CAD position/meters")
+        pyplot.ylabel(coordinate + " offsets difference from mean (stage2)/micrometers")
         for yData in DataListStage2:
             pyplot.plot(xData, yData, 'k.')
 
@@ -93,13 +93,18 @@ class offsetSpreadAnalyse:
             DataListStage1 = self.yOffsetsStage1HistorgramData
             DataListStage2 = self.yOffsetsStage2HistorgramData
 
+        DataListStage1 = [item*10**6 for item in DataListStage1]
+        DataListStage2 = [item*10**6 for item in DataListStage2]
+
         pyplot.subplot(211)
-        pyplot.xlabel(coordinate + " offsets difference from mean (stage1)")
-        pyplot.hist(DataListStage1)
+        pyplot.ylabel("Normalised Density")
+        pyplot.xlabel(coordinate + " offsets difference from mean (stage1)/micrometers")
+        pyplot.hist(DataListStage1, density = True)
 
         pyplot.subplot(212)
-        pyplot.xlabel(coordinate + " offsets difference from mean (stage2)")
-        pyplot.hist(DataListStage2)
+        pyplot.ylabel("Normalised Density")
+        pyplot.xlabel(coordinate + " offsets difference from mean (stage2)/micrometers")
+        pyplot.hist(DataListStage2, density = True)
 
         pyplot.show()
 
