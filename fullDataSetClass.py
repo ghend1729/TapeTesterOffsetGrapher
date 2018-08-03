@@ -49,7 +49,7 @@ class fullDataSet:
             print("9: Plot stage 2 x offsets residuals as function of CAD x position")
             print("Input 'back' to go back.")
 
-            userInput = input()
+            userInput = str(input())
             if userInput == "0":
                 self.plotOffsets('stage 1', 'Y')
             elif userInput == "1":

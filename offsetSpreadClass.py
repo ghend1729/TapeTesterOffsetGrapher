@@ -100,7 +100,7 @@ class offsetSpreadAnalyse:
             print('3: Looks at the residuals in Y offsets.')
             print("Input 'back' to go back.")
 
-            userInput = input()
+            userInput = str(input())
             if userInput == '0':
                 self.graphDifferenceFromMeanAsFunctionOfXCad('X')
             elif userInput == '1':
@@ -159,7 +159,7 @@ class offsetSpreadAnalyse:
             print('3: Looks at the residuals in Y offsets.')
             print("Input 'back' to go back.")
 
-            userInput = input()
+            userInput = str(input())
             if userInput == '0':
                 self.plotHistogram('X')
             elif userInput == '1':

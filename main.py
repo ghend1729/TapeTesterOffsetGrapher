@@ -41,7 +41,7 @@ def mainMenu():
         print('2: Show a histogram offets for spread around')
         print('their mean.')
 
-        userInput = input()
+        userInput = str(input())
         if userInput == 'exit':
             notDone = False
         elif userInput == '0':
