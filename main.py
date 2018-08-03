@@ -10,7 +10,7 @@ dataSetFileNames = os.listdir("DataSetFiles")
 
 print("Data files found:")
 
-#i stores the index of the file name without a tick number. 
+#i stores the index of the file name without a tick number.
 i = 0
 
 for j, item in enumerate(dataSetFileNames):
@@ -67,7 +67,7 @@ def graphParticularDataFile():
         for i in range(len(dataSets)):
             print(str(i) + ': ' + dataSets[i].dataFileName)
 
-        userInput = input()
+        userInput = str(input())
         if userInput == 'back':
             notDone = False
         else:
