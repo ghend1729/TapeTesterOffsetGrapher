@@ -109,13 +109,13 @@ class fullDataSet:
 
         pyplot.subplot(211)
         pyplot.xlabel("X CAD position/meters")
-        pyplot.ylabel(coordinate + " offsets (side1)/micrometers")
+        pyplot.ylabel(coordinate + " offsets (low Y)/micrometers")
         pyplot.plot(horizontalSide1, verticalSide1, 'k.')
         pyplot.plot(horizontalSide1, predVerticalSide1)
 
         pyplot.subplot(212)
         pyplot.xlabel("X CAD position/meters")
-        pyplot.ylabel(coordinate + " offsets (side2)/micrometers")
+        pyplot.ylabel(coordinate + " offsets (high Y)/micrometers")
         pyplot.plot(horizontalSide2, verticalSide2, 'k.')
         pyplot.plot(horizontalSide2, predVerticalSide2)
 
@@ -137,13 +137,13 @@ class fullDataSet:
         verticalSide2 = [item*10**6 for item in verticalSide2]
 
         pyplot.subplot(211)
-        pyplot.xlabel("X offsets (side1)/micrometers")
-        pyplot.ylabel("Y offsets (side1)/micrometers")
+        pyplot.xlabel("X offsets (low Y)/micrometers")
+        pyplot.ylabel("Y offsets (low Y)/micrometers")
         pyplot.plot(horizontalSide1, verticalSide1, 'k.')
 
         pyplot.subplot(212)
-        pyplot.xlabel("X offsets (side2)/micrometers")
-        pyplot.ylabel("Y offsets (side2)/micrometers")
+        pyplot.xlabel("X offsets (high Y)/micrometers")
+        pyplot.ylabel("Y offsets (high Y)/micrometers")
         pyplot.plot(horizontalSide2, verticalSide2, 'k.')
 
         pyplot.show()
@@ -183,12 +183,12 @@ class fullDataSet:
 
         pyplot.subplot(211)
         pyplot.xlabel("X CAD position/meters")
-        pyplot.ylabel(coordinate + " offsets residuals (side1)/micrometers")
+        pyplot.ylabel(coordinate + " offsets residuals (low Y)/micrometers")
         pyplot.plot(horizontalSide1, verticalSide1, 'k.')
 
         pyplot.subplot(212)
         pyplot.xlabel("X CAD position/meters")
-        pyplot.ylabel(coordinate + " offsets residuals (side2)/micrometers")
+        pyplot.ylabel(coordinate + " offsets residuals (high Y)/micrometers")
         pyplot.plot(horizontalSide2, verticalSide2, 'k.')
 
         pyplot.show()
