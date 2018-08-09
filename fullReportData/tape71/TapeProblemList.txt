@@ -1,0 +1,40 @@
+This file lists all network flags in one place.
+
+Tape test 004:
+
+['R3_L1+', 'R3_L1-', 'ACGND1', 'BC_STAVE+', 'BC_STAVE-', 'R3_L1+3', 'CMD_L0-', 'CMD_L0+']
+
+Tape test 005:
+
+['R3_L1+', 'R3_L1-', 'ACGND1', 'BC_STAVE+', 'BC_STAVE-', 'R3_L1+3', 'CMD_L0+3', 'R3_L1+2', 'BC_STAVE+2', 'BC_STAVE+3', 'CMD_L0-', 'CMD_L0+']
+
+Tape test 006:
+
+['R3_L1+', 'R3_L1-', 'ACGND1', 'BC_STAVE+', 'BC_STAVE-', 'R3_L1+3', 'CMD_L0-', 'CMD_L0+']
+
+Tape test 007:
+
+['R3_L1+', 'R3_L1-', 'ACGND1', 'BC_STAVE+', 'BC_STAVE-', 'R3_L1+3', 'CMD_L0+2', 'CMD_L0+3', 'R3_L1+2', 'BC_STAVE+2', 'BC_STAVE+3', 'CMD_L0-', 'CMD_L0+', '+DATA']
+
+Tape test 008:
+
+['R3_L1+', 'R3_L1-', 'ACGND1', 'BC_STAVE+', 'BC_STAVE-', 'R3_L1+3', 'CMD_L0+2', 'CMD_L0+3', 'R3_L1+2', 'BC_STAVE+2', 'BC_STAVE+3', 'CMD_L0-', 'CMD_L0+', '+DATA']
+
+Tape test 009:
+
+['R3_L1+', 'R3_L1-', 'ACGND1', 'BC_STAVE+', 'BC_STAVE-', 'R3_L1+3', 'CMD_L0+2', 'R3_L1+2', 'BC_STAVE+2', 'BC_STAVE+3', 'CMD_L0-', 'CMD_L0+', '+DATA']
+
+Tape test 010:
+
+['R3_L1+', 'R3_L1-', 'ACGND1', 'BC_STAVE+', 'BC_STAVE-', 'CMD_L0+2', 'CMD_L0+3', 'R3_L1+2', 'R3_L1+3', 'BC_STAVE+3', 'CMD_L0-', 'CMD_L0+', '+DATA']
+
+Tape test 011:
+
+['R3_L1+', 'R3_L1-', 'ACGND1', 'BC_STAVE+', 'BC_STAVE-', 'R3_L1+3', 'CMD_L0+2', 'CMD_L0+3', 'BC_STAVE+2', 'BC_STAVE+3', 'CMD_L0-', 'CMD_L0+']
+
+
+
+
+
+
+

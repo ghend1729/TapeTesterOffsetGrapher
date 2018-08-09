@@ -65,11 +65,12 @@ class offsetSpreadAnalyse:
                 DataListStage1 = [[item[i]*10**6 for item in self.yOffsetsStage1.residuals] for i in range(self.numberOfDataSets)]
                 DataListStage2 = [[item[i]*10**6 for item in self.yOffsetsStage2.residuals] for i in range(self.numberOfDataSets)]
 
-        for item in DataListStage1:
+        for j, item in enumerate(DataListStage1):
             for i in range(len(item)):
                 if abs(item[i]) > 100:
                     print("Residual from fit: " + str(item[i]) + " micrometers")
                     print("At CADX: " + str(xData[i]) + " meters")
+                    print("Data set index: " + str(j))
 
         pyplot.subplot(211)
         pyplot.xlabel("X CAD position/meters")
