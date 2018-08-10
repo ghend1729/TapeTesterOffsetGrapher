@@ -32,10 +32,11 @@ offsetSpreadAnalyseObject = offsetSpreadClass.offsetSpreadAnalyse(dataSets)
 
 largeFiducialResidHistY = []
 largeFiducialResidHistX = []
-
-for fiducialDataSet in tapeCalObjects[1].largeFiducialObjects:
-    largeFiducialResidHistY += [item[1]*10**6 for item in fiducialDataSet.residualsCombined]
-    largeFiducialResidHistX += [item[0]*10**6 for item in fiducialDataSet.residualsCombined]
+for tape in tapeCalObjects:
+    if not tape.serialNumber == '71':
+        for fiducialDataSet in tape.largeFiducialObjects:
+            largeFiducialResidHistY += [item[1]*10**6 for item in fiducialDataSet.residualsCombined]
+            largeFiducialResidHistX += [item[0]*10**6 for item in fiducialDataSet.residualsCombined]
 
 def mainMenu():
     notDone = True
